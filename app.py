@@ -1,7 +1,7 @@
 import pickle
 import streamlit as st
 import requests
-from utils.trailer import open_trailer
+from utils.trailer import watch_trailer
 
 st.set_page_config(
     page_title="Movie Recommender",
@@ -200,9 +200,9 @@ selected_movie = st.selectbox(
     "Search Your Favorite Movie",
     movie_list
 )
-if st.button("▶ Watch Trailer"):
-    open_trailer(selected_movie)
 
+trailer_url = watch_trailer(selected_movie)
+st.link_button("▶ Watch Trailer", trailer_url)
 
 # ---------------- MAIN MOVIE DETAILS ----------------
 movie_details = fetch_movie_details(selected_movie)
