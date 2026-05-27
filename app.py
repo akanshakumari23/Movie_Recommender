@@ -78,7 +78,7 @@ div[data-baseweb="select"] {
     box-shadow: 0px 0px 15px rgba(255,255,255,0.2);
 }
 
-.movie-title {
+.main-movie-title {
     color: white;
     font-size: 17px;
     font-weight: bold;
@@ -216,7 +216,7 @@ with col2:
     st.markdown(f"""
     <style>
 
-    .movie-title {{
+    .main-movie-title {{
         font-size: 42px;
         font-weight: 600;
         color: #ffffff;
@@ -258,7 +258,7 @@ with col2:
 
     </style>
 
-    <div class="movie-title">
+    <div class="main-movie-title">
         🎬 {selected_movie}
     </div>
 
